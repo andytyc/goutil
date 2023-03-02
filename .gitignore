@@ -1,3 +1,18 @@
+######## 移除"无后缀"的文件 {放在顶部}
+*
+!*.*
+!*/
+
+######## 保留"无后缀"的一些文件
+!.gitignore
+!LICENSE
+!readme
+!README
+!Makefile
+!Dockerfile
+
+# ########################################################################
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -13,3 +28,17 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# ########################################################################
+
+.idea
+.idea/
+.DS_Store
+# .vscode/
+
+*.zip
+*.tar.gz
+
+testdata/
+logs/
+tmp/
