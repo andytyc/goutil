@@ -18,7 +18,7 @@ func (r *ResData) Info() string {
 	return fmt.Sprintf("[%d] %s | %s", r.Code, r.Message, r.MoreInfo)
 }
 
-func UnmarshalBodyByJson(body io.ReadCloser, result *ResData) error {
+func (r *ResData) JsonUnmarshal(body io.ReadCloser) error {
 	if body == nil {
 		return fmt.Errorf("resp body is empty")
 	}
@@ -27,7 +27,7 @@ func UnmarshalBodyByJson(body io.ReadCloser, result *ResData) error {
 		err = fmt.Errorf("read resp body err %s", err)
 		return err
 	}
-	err = json.Unmarshal(b, result)
+	err = json.Unmarshal(b, r)
 	if err != nil {
 		err = fmt.Errorf("resp body json unmarshal err %s", err)
 		return err
