@@ -57,7 +57,7 @@ func ResetCodeMsgMap(newCodeMsgMap map[int]string) {
 type ResData struct {
 	Code     int         `json:"code"`      // 自定义code
 	Msg      string      `json:"msg"`       // 提示信息
-	Data     interface{} `json:"data"`      // 返回数据
+	Data     interface{} `json:"data"`      // 返回数据, 注意: 如json序列化时，遵循json编码器规则进行序列化
 	MoreInfo string      `json:"more_info"` // 一般返回失败时，捕捉的错误信息，用于开发者查看
 }
 
