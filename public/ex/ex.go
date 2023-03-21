@@ -11,6 +11,8 @@ import (
 	"unsafe"
 )
 
+// os exec command eg: bash/sh
+
 // Cmder Cmder
 type Cmder struct {
 	terminal []string
