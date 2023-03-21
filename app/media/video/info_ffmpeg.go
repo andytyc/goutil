@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/andytyc/goutil/op/opex"
+	"github.com/andytyc/goutil/op/opos/opex"
 )
 
 // MediaFFprobe MediaFFprobe
