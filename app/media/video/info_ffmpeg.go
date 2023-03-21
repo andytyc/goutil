@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/andytyc/goutil/public/ex"
+	"github.com/andytyc/goutil/op/opex"
 )
 
 // MediaFFprobe MediaFFprobe
@@ -45,8 +45,8 @@ type MediaFormat struct {
 }
 
 // GetMediaFileInfo 获取视频元数据
-func GetMediaFileInfo(filename string) (ret *ex.Result, mediaInfo *MediaFFprobe, err error) {
-	cmder := new(ex.Cmder)
+func GetMediaFileInfo(filename string) (ret *opex.Result, mediaInfo *MediaFFprobe, err error) {
+	cmder := new(opex.Cmder)
 	cmdline := "ffprobe -v quiet -print_format json -show_format -show_streams " + filename
 	ret = cmder.Run(cmdline, 10)
 
