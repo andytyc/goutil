@@ -1,4 +1,4 @@
-package opex
+package opos
 
 import (
 	"bytes"
